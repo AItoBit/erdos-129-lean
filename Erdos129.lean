@@ -418,7 +418,6 @@ As written, this is false (Girao): see `two_pow_lt_R`.
 -/
 theorem erdos_129 : False ↔
     ∀ r : ℕ, 2 ≤ r → ∃ C : ℝ, 1 < C ∧ ∀ n : ℕ, (R n 3 r : ℝ) < C ^ Real.sqrt n := by
-  change False ↔ _
   refine ⟨False.elim, fun h => ?_⟩
   obtain ⟨C, hC, hall⟩ := h 2 le_rfl
   exact not_eventually_R_lt C (by linarith) (Filter.Eventually.of_forall hall)
