@@ -1,0 +1,18 @@
+name = "erdos129"
+version = "0.1.0"
+defaultTargets = ["Erdos129", "Audit"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.33.1"
+
+[[lean_lib]]
+name = "Erdos129"
+
+[[lean_lib]]
+name = "Audit"
